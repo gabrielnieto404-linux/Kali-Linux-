@@ -1,0 +1,24 @@
+bash packtools2.0
+./phoneinfoga --help
+./phoneinfoga scan -n
+
+pip3 install termcolor --break-system-packages
+
+cd /root/pack_tools2.0/IPGeoLocation
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip install termcolor
+
+python ipgeolocation.py
+
+python3 ipgeolocation.py -t 142.251.16.153
+
+apt update
+git clone https://Github.com/venom-24/pack_tools2.0.git
+
+apt install git
+
+git clone https://github.com/termuxhackers-id/sara
