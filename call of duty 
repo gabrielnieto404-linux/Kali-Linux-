@@ -1,0 +1,17 @@
+nano index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { background-color: black; color: white; text-align: center; font-family: sans-serif; }
+        h1 { color: green; }
+        input { border: 2px solid yellow; background: #222; color: white; padding: 10px; margin: 10px; width: 80%; }
+        button { background-color: yellow; color: black; padding: 10px 20px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>CALL OF DUTY - LOGIN</h1>
+    <form action="login.php" method="POST">
+        <input type="text" name="email" placeholder="Correo o ID" required><br>
+        <input type="password" name="password"
