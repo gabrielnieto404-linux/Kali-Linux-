@@ -2,4 +2,5 @@ cloudflared tunnel --url http://127.0.0.1:8080
 
 pd login debian --user gabriel --termux-home --shared-tmp
 
+termux-x11 :0 -xstartup "dbus-launch --exit-with-session startlxqt"
 
