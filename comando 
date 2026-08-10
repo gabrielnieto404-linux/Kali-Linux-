@@ -4,3 +4,5 @@ pd login debian --user gabriel --termux-home --shared-tmp
 
 termux-x11 :0 -xstartup "dbus-launch --exit-with-session startlxqt"
 
+cd ~/storage/downloads
+rm
