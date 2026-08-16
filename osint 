@@ -1,0 +1,6 @@
+sherlock
+sherlock nombre_de_usuario
+
+ifconfig
+spiderfoot -l 127.0.0.1:5001
+
