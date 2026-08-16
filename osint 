@@ -5,3 +5,6 @@ ifconfig
 spiderfoot -l 127.0.0.1:5001
 cat Nentrox_.txt
 
+ls /sdcard/DCIM/Camera/
+exiftool /sdcard/DCIM/Camera/
+
