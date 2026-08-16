@@ -6,3 +6,7 @@ termux-x11 :0 -xstartup "dbus-launch --exit-with-session startlxqt"
 
 cd ~/storage/downloads
 rm
+
+python3 bomber.py
+
+
