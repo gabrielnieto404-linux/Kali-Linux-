@@ -5,8 +5,8 @@ pd login debian --user gabriel --termux-home --shared-tmp
 termux-x11 :0 -xstartup "dbus-launch --exit-with-session startlxqt"
 
 cd ~/storage/downloads
-rm
 
-python3 bomber.py
+echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" > /etc/resolv.conf
+
 
 
