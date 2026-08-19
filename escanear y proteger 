@@ -1,8 +1,0 @@
-pkg install clamav -y
-freshclam
-
-clamscan -r ~/storage/downloads
-
-curl -sI https://chances-local-especially-regularly.trycloudflare.com
-
-clamscan -r --remove ~/storage/downloads
