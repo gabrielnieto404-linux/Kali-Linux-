@@ -1,0 +1,130 @@
+#!/bin/bash
+
+pausa() {
+    echo ""
+    read -p "Presiona Enter para volver al menú..."
+}
+
+while true; do
+    clear
+    echo "=================================================="
+    echo "          KIT COMPLETO TERMUX API (1-16)          "
+    echo "=================================================="
+    echo " 1) Batería (termux-battery-status)"
+    echo " 2) Enviar SMS (termux-sms-send)"
+    echo " 3) Ver Ubicación GPS (termux-location)"
+    echo " 4) Linterna / Vibración (termux-torch / vibrate)"
+    echo " 5) Sensores del Dispositivo (termux-sensor)"
+    echo " 6) Copiar/Leer Portapapeles (termux-clipboard)"
+    echo " 7) Escanear Archivos Media (termux-media-scan)"
+    echo " 8) Estado de Conexión a Internet (ping test)"
+    echo " 9) Enviar Notificación Android (termux-notification)"
+    echo "10) Abrir URL o Archivo (termux-open-url)"
+    echo "11) Estado de Wi-Fi (termux-wifi-status)"
+    echo "12) Monitoreo continuo de Batería"
+    echo "13) Automatización por Ubicación"
+    echo "14) Ejecutar comando en segundo plano"
+    echo "15) Compartir texto a otra App (termux-share)"
+    echo "16) Escuchar eventos del sistema"
+    echo " 0) Salir"
+    echo "=================================================="
+    read -p "Selecciona una opción [0-16]: " opcion
+
+    case $opcion in
+        1)
+            termux-battery-status
+            pausa
+            ;;
+        2)
+            read -p "Número de teléfono: " numero
+            read -p "Mensaje: " msj
+            termux-sms-send -n "$numero" "$msj"
+            echo "SMS enviado."
+            pausa
+            ;;
+        3)
+            echo "Obteniendo ubicación GPS..."
+            termux-location
+            pausa
+            ;;
+        4)
+            echo "1) Encender linterna | 2) Apagar linterna | 3) Vibrar"
+            read -p "Opción: " sub
+            if [ "$sub" == "1" ]; then termux-torch on; fi
+            if [ "$sub" == "2" ]; then termux-torch off; fi
+            if [ "$sub" == "3" ]; then termux-vibrate -d 1000; fi
+            ;;
+        5)
+            echo "Leyendo sensores por 3 segundos..."
+            termux-sensor -n 1
+            pausa
+            ;;
+        6)
+            read -p "Texto a copiar al portapapeles: " txt
+            echo "$txt" | termux-clipboard-set
+            echo "Copiado. Contenido actual:"
+            termux-clipboard-get
+            pausa
+            ;;
+        7)
+            read -p "Ruta del archivo a escanear: " ruta
+            termux-media-scan "$ruta"
+            pausa
+            ;;
+        8)
+            ping -c 3 google.com
+            pausa
+            ;;
+        9)
+            read -p "Título de notificación: " tit
+            read -p "Mensaje: " cont
+            termux-notification --title "$tit" --content "$cont"
+            ;;
+        10)
+            read -p "Ingresa URL (ej: https://google.com): " url
+            termux-open-url "$url"
+            ;;
+        11)
+            termux-wifi-status
+            pausa
+            ;;
+        12)
+            echo "Presiona Ctrl+C para detener el monitoreo..."
+            while true; do
+                clear
+                termux-battery-status
+                sleep 5
+            done
+            ;;
+        13)
+            echo "Monitoreando GPS cada 10s (Ctrl+C para salir)..."
+            while true; do
+                termux-location
+                sleep 10
+            done
+            ;;
+        14)
+            read -p "Comando a ejecutar en fondo: " cmd
+            $cmd &
+            echo "Ejecutándose en segundo plano."
+            pausa
+            ;;
+        15)
+            read -p "Texto para compartir con otras apps: " stxt
+            echo "$stxt" | termux-share
+            ;;
+        16)
+            echo "Escuchando eventos de red (Ctrl+C para salir)..."
+            termux-wifi-status
+            pausa
+            ;;
+        0)
+            echo "Saliendo del Script..."
+            exit 0
+            ;;
+        *)
+            echo "Opción invalida."
+            sleep 1
+            ;;
+    esac
+done
