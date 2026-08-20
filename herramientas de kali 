@@ -1,0 +1,1 @@
+wpscan --url  --enumerate p,u
