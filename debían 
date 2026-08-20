@@ -13,7 +13,6 @@ apt search lxde
 apt search libreoffice
 apt search firefox
 apt install lxqt firefox-esr libreoffice
-
-
+adduser Gabriel
 
 
