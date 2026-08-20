@@ -3,4 +3,5 @@ pkg install termux-x11-nightly
 pkg in proot-distro
 pd -h
 pd list
+proot-distro install debían 
 
