@@ -5,4 +5,6 @@ pd -h
 pd list
 proot-distro install debían 
 proot-distro login debian
+uname -a
+
 
