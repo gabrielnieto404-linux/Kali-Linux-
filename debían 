@@ -9,6 +9,9 @@ uname -a
 apt install fastfetch -y
 fastfetch
 neofetch
+apt search lxde
+apt search libreoffice
+apt search firefox
 
 
 
