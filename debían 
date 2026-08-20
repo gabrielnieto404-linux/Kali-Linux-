@@ -6,5 +6,7 @@ pd list
 proot-distro install debían 
 proot-distro login debian
 uname -a
+apt install fastfetch -y
+
 
 
