@@ -1,3 +1,0 @@
-wpscan --url  --enumerate p,u
-
-whatweb https://www.gamezfull.com
