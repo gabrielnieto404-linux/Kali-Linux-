@@ -3,3 +3,6 @@ metagoofil -d an1.com -t pdf,doc,docx,xls,xlsx -l 50 -n 20 -o resultados_an1 -f 
 
             spiderfoot
 spiderfoot -l 127.0.0.1:5001
+
+              sherlock
+sherlock nombre de usuario
