@@ -6,3 +6,6 @@ spiderfoot -l 127.0.0.1:5001
 
               sherlock
 sherlock nombre de usuario
+
+              exiftool
+exiftool 1790197727622.jpg
