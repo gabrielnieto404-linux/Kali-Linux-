@@ -1,3 +1,4 @@
 pacman -Sy
 pacman -Syu
+Pacman -S
 
