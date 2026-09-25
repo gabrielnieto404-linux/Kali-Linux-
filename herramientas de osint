@@ -18,3 +18,7 @@ photon -u https://palacioandroid.com/
 
              TheHarvester
 theHarvester -d palacioandroid.com -b all
+
+               dnsenum
+
+dnsenum palacioandroid.com
