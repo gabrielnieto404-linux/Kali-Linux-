@@ -9,3 +9,6 @@ sherlock nombre de usuario
 
               exiftool
 exiftool 1790197727622.jpg
+
+              binwalk
+binwalk 1790197727622.jpg
