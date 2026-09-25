@@ -1,0 +1,9 @@
+recon-ng
+marketplace search
+
+marketplace install recon/domains-vulnerabilities/xssed
+
+modules load recon/domains-vulnerabilities/xssed
+
+options set SOURCE palacioandroid.com
+run
