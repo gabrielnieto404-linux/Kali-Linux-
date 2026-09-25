@@ -15,3 +15,6 @@ binwalk 1790197727622.jpg
 
               photon
 photon -u https://palacioandroid.com/
+
+             TheHarvester
+theHarvester -d palacioandroid.com -b all
