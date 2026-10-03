@@ -1,4 +1,6 @@
 pacman -Sy
 pacman -Syu
 Pacman -S
+nano /etc/pacman.conf
+
 
