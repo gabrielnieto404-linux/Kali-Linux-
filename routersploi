@@ -3,3 +3,4 @@ search scanners
 use scanners/autopwn
 show options
 set target 192.168.0.1
+run
